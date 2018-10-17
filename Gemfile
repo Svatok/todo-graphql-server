@@ -16,6 +16,9 @@ gem 'rails'
 gem 'sass-rails'
 gem 'tzinfo-data'
 
+# GraphQL server
+gem 'graphql'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
@@ -32,6 +35,9 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+
+  # GraphQL server
+  gem 'graphiql-rails'
 end
 
 group :test do
