@@ -19,6 +19,10 @@ gem 'tzinfo-data'
 # GraphQL server
 gem 'graphql'
 
+# Authentification
+gem 'bcrypt'
+gem 'jwt'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'

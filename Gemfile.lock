@@ -54,6 +54,7 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     awesome_print (1.8.0)
+    bcrypt (3.1.12)
     brakeman (4.3.1)
     builder (3.2.3)
     bullet (5.7.6)
@@ -129,6 +130,9 @@ GEM
       terminal-table (>= 1.5.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.4.11)
+      railties
+      sprockets-rails
     graphql (1.8.11)
     hirb (0.7.3)
     httparty (0.16.2)
@@ -141,6 +145,7 @@ GEM
     json_spec (1.1.5)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
+    jwt (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -374,14 +379,17 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt
   bullet
   bundle-audit
   dry-types
   dry-validation (= 0.11.1)
   factory_bot_rails
   ffaker
+  graphiql-rails
   graphql
   json_spec
+  jwt
   listen
   pg
   pronto
