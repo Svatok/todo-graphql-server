@@ -1,9 +1,9 @@
-module RootQuery::Users::Resolvers
+module Resolvers::Users
   class Index < ::Resolvers::Base
     type [::Types::Objects::UserType], null: false
 
     def resolve
-      run ::RootQuery::Users::Index
+      run ::Users::Index
       @model
     end
   end

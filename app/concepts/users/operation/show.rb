@@ -1,4 +1,4 @@
-class RootQuery::Users::Show < Trailblazer::Operation
+class Users::Show < Trailblazer::Operation
   step :model!
 
   def model!(options, params:, **)

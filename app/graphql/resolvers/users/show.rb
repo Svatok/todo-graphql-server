@@ -1,11 +1,11 @@
-module RootQuery::Users::Resolvers
+module Resolvers::Users
   class Show < ::Resolvers::Base
     type ::Types::Objects::UserType, null: true
 
     argument :id, ID, required: true
 
     def resolve(**args)
-      run RootQuery::Users::Show, args
+      run ::Users::Show, args
       @model
     end
   end
