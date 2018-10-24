@@ -1,5 +1,5 @@
-module Types::Objects
-  class CommentType < BaseObject
+module Objects
+  class Comment < Lib::Objects::Base
     description 'A project'
 
     field :id, ID, null: false
@@ -7,6 +7,6 @@ module Types::Objects
     field :attachment, String, null: true
     field :created_at, Types::Scalars::DateTime, null: false
     field :updated_at, Types::Scalars::DateTime, null: false
-    field :task, TaskType, null: false
+    field :task, Objects::Task, null: false
   end
 end

@@ -13,6 +13,8 @@ module TodoGraphql
 
     config.middleware.use ActionDispatch::Flash
     config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('app', 'graphql', 'lib')
+    config.autoload_paths << Rails.root.join('app', 'graphql', 'objects')
     config.autoload_paths << Rails.root.join('app', 'graphql', 'types')
     config.autoload_paths << Rails.root.join('app', 'graphql', 'types', 'objects')
     # Settings in config/environments/* take precedence over those specified here.

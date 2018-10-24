@@ -1,6 +1,6 @@
 module Types
-  class QueryType < Types::Objects::BaseObject
-    field :users, resolver: Resolvers::Users::Index, description: 'All users'
-    field :user, resolver: Resolvers::Users::Show, description: 'User'
+  class QueryType < Lib::Objects::Base
+    field :users, resolver: Users::Resolvers::Index, description: 'All users'
+    field :user, resolver: Users::Resolvers::Show, description: 'User'
   end
 end

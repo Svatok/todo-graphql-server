@@ -1,6 +1,6 @@
-module Resolvers::Users
-  class Show < ::Resolvers::Base
-    type ::Types::Objects::UserType, null: true
+module Users::Resolvers
+  class Show < ::Lib::Resolvers::Base
+    type ::Objects::User, null: true
 
     argument :id, ID, required: true
 

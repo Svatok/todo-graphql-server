@@ -1,5 +1,5 @@
-module Types::Objects
-  class TaskType < BaseObject
+module Objects
+  class Task < Lib::Objects::Base
     description 'A project'
 
     field :id, ID, null: false
@@ -9,7 +9,7 @@ module Types::Objects
     field :deadline, Types::Scalars::DateTime, null: false
     field :created_at, Types::Scalars::DateTime, null: false
     field :updated_at, Types::Scalars::DateTime, null: false
-    field :comment, CommentType, null: false
-    field :project, ProjectType, null: false
+    field :comment, Objects::Comment, null: false
+    field :project, Objects::Project, null: false
   end
 end

@@ -1,5 +1,5 @@
-module Types::Objects
-  class ProjectType < BaseObject
+module Objects
+  class Project < Lib::Objects::Base
     description 'A project'
 
     field :id, ID, null: false
@@ -7,7 +7,7 @@ module Types::Objects
     field :position, Int, null: false
     field :created_at, Types::Scalars::DateTime, null: false
     field :updated_at, Types::Scalars::DateTime, null: false
-    field :tasks, [TaskType], null: false
-    field :user, UserType, null: false
+    field :tasks, [Objects::Task], null: false
+    field :user, Objects::User, null: false
   end
 end
