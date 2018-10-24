@@ -1,4 +1,6 @@
 class Users::Mutations::Create < Lib::Mutations::Base
+  description 'Create new user (Sign Up)'
+
   argument :email, String, required: true
   argument :password, String, required: true
   argument :password_confirmation, String, required: true
@@ -7,17 +9,12 @@ class Users::Mutations::Create < Lib::Mutations::Base
   field :errors, [Objects::Error], null: false
 
   def resolve(**args)
-    result = Users::Create.call(params: args, 'object' => object, 'context' => context)
+    result = run Users::Create, args
+
     if result.success?
-      {
-        user: result[:model],
-        errors: []
-      }
+      { user: result[:model], errors: [] }
     else
-      {
-        user: nil,
-        errors: Lib::Service::ErrorsConverter.call(result['contract.default'])
-      }
+      { errors: Lib::Service::ErrorsConverter.call(result['contract.default']) }
     end
   end
 end
