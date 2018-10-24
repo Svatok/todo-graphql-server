@@ -15,8 +15,6 @@ module TodoGraphql
     config.autoload_paths << Rails.root.join('lib')
     config.autoload_paths << Rails.root.join('app', 'graphql', 'lib')
     config.autoload_paths << Rails.root.join('app', 'graphql', 'objects')
-    config.autoload_paths << Rails.root.join('app', 'graphql', 'types')
-    config.autoload_paths << Rails.root.join('app', 'graphql', 'types', 'objects')
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

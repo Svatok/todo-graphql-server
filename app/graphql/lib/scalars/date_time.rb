@@ -1,5 +1,5 @@
-module Types::Scalars
-  class DateTime < BaseScalar
+module Lib::Scalars
+  class DateTime < Base
     description 'DateTime'
 
     def self.coerce_input(input_value, _context)
