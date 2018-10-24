@@ -22,8 +22,8 @@
 .DS_Store
 .byebug_history
 
-# Ignore encrypted secrets key file.
-config/secrets.yml.key
+# Ignore encrypted master key file.
+config/master.key
 
 # Ignore test coverage info
 /coverage/*
