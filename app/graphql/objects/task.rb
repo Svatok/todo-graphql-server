@@ -6,7 +6,7 @@ module Objects
     field :name, String, null: false
     field :done, Boolean, null: false
     field :position, Int, null: false
-    field :deadline, Lib::Scalars::DateTime, null: false
+    field :deadline, Lib::Scalars::DateTime, null: true
     field :created_at, Lib::Scalars::DateTime, null: false
     field :updated_at, Lib::Scalars::DateTime, null: false
     field :comment, Objects::Comment, null: false

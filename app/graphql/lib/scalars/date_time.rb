@@ -3,7 +3,7 @@ module Lib::Scalars
     description 'DateTime'
 
     def self.coerce_input(input_value, _context)
-      Time.zone.parse(input_value)
+      Time.zone.parse(input_value)&.to_datetime
     end
 
     def self.coerce_result(ruby_value, _context)
