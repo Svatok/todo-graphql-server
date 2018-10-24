@@ -23,6 +23,9 @@ gem 'graphql'
 gem 'bcrypt'
 gem 'jwt'
 
+# Authorization
+gem 'pundit'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
