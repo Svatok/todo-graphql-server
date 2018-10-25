@@ -1,4 +1,4 @@
 class Task < ApplicationRecord
-  has_one :comment, dependent: :destroy
+  has_many :comments, dependent: :destroy
   belongs_to :project
 end
