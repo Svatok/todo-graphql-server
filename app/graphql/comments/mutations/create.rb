@@ -4,6 +4,7 @@ class Comments::Mutations::Create < Lib::Mutations::WithUserAuthentication
 
   argument :task_id, Int, required: true
   argument :body, String, required: true
+  argument :attachment, ApolloUploadServer::Upload, required: false
 
   field :comment, Objects::Comment, null: true
   field :errors, [Objects::Error], null: false

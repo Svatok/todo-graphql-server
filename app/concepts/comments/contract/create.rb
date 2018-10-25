@@ -7,7 +7,7 @@ module Comments::Contract
 
     validation do
       required(:body).filled(:str?)
-      optional(:attachment).maybe(:str?)
+      optional(:attachment)
     end
   end
 end
