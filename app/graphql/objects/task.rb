@@ -9,7 +9,8 @@ module Objects
     field :deadline, Lib::Scalars::DateTime, null: true
     field :created_at, Lib::Scalars::DateTime, null: false
     field :updated_at, Lib::Scalars::DateTime, null: false
-    field :comment, Objects::Comment, null: false
+    field :comments, [Objects::Comment], null: false
     field :project, Objects::Project, null: false
+    field :project_id, Int, null: false
   end
 end
