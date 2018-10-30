@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :task do
-    name { "MyString" }
+    name { FFaker::DizzleIpsum.word }
     done { false }
     project { nil }
-    position { 1 }
-    deadline { "2018-10-17 23:34:44" }
+    position { rand(0..5) }
+    deadline { FFaker::Time.datetime }
   end
 end
